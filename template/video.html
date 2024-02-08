@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer type="text/javascript" src="slideshow.js"></script>
+    <link rel="stylesheet" href="video.css" type="text/css" />
+    <style>
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      .slide.flex[data-slide="1"] {
+        div.text {
+          position: relative;
+          opacity: 0;
+          animation: fadeIn 2s linear var(--delay) 1 both;
+
+          &#agile_text {
+            top: 200px;
+            left: -200px;
+          }
+
+          &#tdd_text {
+            top: 500px;
+            left: 100px;
+          }
+
+          &#oop_text {
+            top: 250px;
+            left: 350px;
+          }
+        }
+      }
+      .slide.flex[data-slide="2"] {
+        .path {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: dash 400ms linear forwards;
+        }
+        .dashed{
+          stroke-dasharray: 8,15;
+        }
+        div.text {
+          font-size: 28pt;
+          transform: translateY(70px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas">
+
+
+
+
+
+      <div class="slide hide" data-slide="1">
+        <div id="agile_text" class="text" style="--delay: 100ms">Agile</div>
+        <div id="tdd_text" class="text" style="--delay: 1000ms">TDD</div>
+        <div id="oop_text" class="text" style="--delay: 1900ms">OOP</div>
+      </div>
+
+
+
+
+
+      <div class="slide hide" data-slide="2">
+        <div class="text">Reasons</div>
+        <div id="image">
+          <svg
+             width="400"
+             height="200"
+             viewBox="0 0 1024 200"
+             version="1.1"
+             id="svg1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="layer1">
+              <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" class="path" />
+              <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="black" stroke-width="5" class="dashed" />
+            </g>
+          </svg>
+        </div>
+        <div class="text">Responsibilities</div>
+      </div>
+
+
+
+
+
+    </div>
+  </body>
+</html>

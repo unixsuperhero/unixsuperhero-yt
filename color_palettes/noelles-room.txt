@@ -1,0 +1,11 @@
+;paint.net Palette File
+;Downloaded from Lospec.com/palette-list
+;Palette Name: Noelle's Room
+;Description: This is the palette used for Noelle's room from the game&nbsp;Deltarune Chapter 2 (https://deltarune.com/).
+;Colors: 6
+FF9fe8ff
+FF74bff8
+FF6aa3cc
+FF517184
+FF364e5e
+FF000000

@@ -1,0 +1,15 @@
+;paint.net Palette File
+;Downloaded from Lospec.com/palette-list
+;Palette Name: Aquaverse
+;Description: 
+;Colors: 10
+FF000924
+FF041b38
+FF093659
+FF145d87
+FF228399
+FF31b0b0
+FF46cfb3
+FF73f0c6
+FFabffd1
+FFd9ffe2
