@@ -12,7 +12,8 @@ body {
 }
 
 #canvas {
-  background: radial-gradient(circle at 30% 50%, hsl(227, 43%, 7%) 10%, #030303);
+  /* background: radial-gradient(circle at 30% 50%, hsl(227, 43%, 7%) 10%, #030303); */
+  background-color: hsl(227, 43%, 7%);
   display: flex;
   justify-content: center;
   margin: 100px auto;
