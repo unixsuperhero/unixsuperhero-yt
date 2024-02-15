@@ -4,7 +4,9 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer type="text/javascript" src="slideshow.js"></script>
+    <!-- script defer type="text/javascript" src="slideshow.js"></script -->
+    <link rel="stylesheet" href="dist/reveal.css">
+    <!-- link rel="stylesheet" href="dist/theme/white.css" -->
     <link rel="stylesheet" href="video.css" type="text/css" />
     <style>
       @keyframes fadeIn {
@@ -38,18 +40,10 @@
           stroke-dashoffset: 0;
         }
       }
-      .slide.flex {
+      .slide {
         display: flex;
         justify-content: center;
         position: relative;
-
-        img.bg {
-          position: absolute;
-          height: 100%;
-          z-index: 24;
-          opacity: 0.009;
-          animation: partialFadeOut 1500ms ease both;
-        }
 
         div.content {
           display: flex;
@@ -60,12 +54,9 @@
           z-index: 22;
         }
       }
-      .slide.flex[data-slide="1"] {
-        img.bg {
-          animation: partialFadeIn 1400ms ease both;
-        }
+      .slide.present[data-slide="1"] {
       }
-      .slide.flex[data-slide="2"] {
+      .slide.present[data-slide="2"] {
         div.text {
           position: relative;
           opacity: 0;
@@ -92,7 +83,7 @@
           }
         }
       }
-      .slide.flex[data-slide="3"] {
+      .slide.present[data-slide="3"] {
         .path {
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
@@ -120,57 +111,72 @@
   </head>
   <body>
     <div id="canvas">
+      <div class="reveal">
+
+        <div class="slides">
+
+          <section class="slide hide" data-slide="1">
+            <div class="content">&nbsp;</div>
+          </section>
 
 
-      <div class="slide hide" data-slide="1">
-        <div class="content">&nbsp;</div>
-        <img class="bg" src="./images/anime-bg.png" alt="bg" />
-      </div>
+          <section class="slide hide" data-slide="2">
+            <div class="content">
+              <div id="agile_text" class="text" style="--delay: 100ms">Agile</div>
+              <div id="tdd_text" class="text" style="--delay: 800ms">TDD</div>
+              <div id="oop_text" class="text" style="--delay: 1500ms">OOP</div>
+              <div id="dry_text" class="text" style="--delay: 2200ms">DRY</div>
+            </div>
+          </section>
 
 
-      <div class="slide hide" data-slide="2">
-        <div class="content">
-          <div id="agile_text" class="text" style="--delay: 100ms">Agile</div>
-          <div id="tdd_text" class="text" style="--delay: 800ms">TDD</div>
-          <div id="oop_text" class="text" style="--delay: 1500ms">OOP</div>
-          <div id="dry_text" class="text" style="--delay: 2200ms">DRY</div>
+
+
+
+          <section class="slide hide" data-slide="3">
+            <div class="content">
+              <div class="text">Reasons</div>
+              <div id="image">
+                <svg
+                   width="400"
+                   height="200"
+                   viewBox="0 0 1024 200"
+                   version="1.1"
+                   id="svg1"
+                   xmlns="http://www.w3.org/2000/svg"
+                   xmlns:svg="http://www.w3.org/2000/svg">
+                  <g id="layer1">
+                    <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" class="path" />
+                    <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="black" stroke-width="5" class="dashed" />
+                    <path d="M 481,35 541,135" id="left_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
+                    <path d="M 541,35 481,135" id="right_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
+                  </g>
+                </svg>
+              </div>
+              <div class="text">Responsibilities</div>
+            </div>
+          </section>
+
+
+
         </div>
-        <img class="bg" src="./images/anime-bg.png" alt="bg" />
       </div>
-
-
-
-
-
-      <div class="slide hide" data-slide="3">
-        <div class="content">
-          <div class="text">Reasons</div>
-          <div id="image">
-            <svg
-               width="400"
-               height="200"
-               viewBox="0 0 1024 200"
-               version="1.1"
-               id="svg1"
-               xmlns="http://www.w3.org/2000/svg"
-               xmlns:svg="http://www.w3.org/2000/svg">
-              <g id="layer1">
-                <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" class="path" />
-                <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="black" stroke-width="5" class="dashed" />
-                <path d="M 481,35 541,135" id="left_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
-                <path d="M 541,35 481,135" id="right_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
-              </g>
-            </svg>
-          </div>
-          <div class="text">Responsibilities</div>
-        </div>
-        <img class="bg" src="./images/anime-bg.png" alt="bg" />
-      </div>
-
-
-
-
-
     </div>
+
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: false,
+        disableLayout: true,
+        fragments: true,
+        fragmentInURL: true,
+        autoAnimate: true,
+        display: 'flex',
+        transition: 'none',
+      });
+
+      document.body.classList.remove('reveal-viewport');
+    </script>
   </body>
 </html>
