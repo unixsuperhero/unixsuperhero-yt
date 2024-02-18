@@ -1,0 +1,49 @@
+
+class Game // before
+  int score()
+  void add(int pins)
+  void adjustCurrentFrame(int pins)
+  int scoreForFrame(int theFrame)
+  int handleSecondThrow()
+  boolean strike()
+  boolean spare()
+  int twoBallsInFrame()
+  int nextTwoBallsForStrike()
+  int nextBallForSpare()
+  int getCurrentFrame()
+
+  int itsScore
+  int[] itsThrows
+  int itsCurrentThrow
+  int itsCurrentFrame
+  boolean firstThrow
+
+
+
+
+//Game.java----------------------------------
+class Game
+	int score()
+  void add(int pins)
+  void adjustCurrentFrame(int pins)
+  int scoreForFrame(int theFrame)
+  boolean lastBallInFrame(int pins)
+  boolean strike(int pins)
+  void advanceFrame()
+
+  int itsCurrentFrame = 0;
+  boolean firstThrowInFrame = true;
+  Scorer itsScorer = new Scorer();
+
+class Scorer
+  void addThrow(int pins)
+  int scoreForFrame(int theFrame)
+  boolean strike()
+  boolean spare()
+  int nextTwoBallsForStrike()
+  int nextBallForSpare()
+  int twoBallsInFrame()
+
+  int ball;
+  int[] itsThrows = new int[21];
+  int itsCurrentThrow = 0;

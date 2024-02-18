@@ -34,10 +34,6 @@ body {
     .flex {
         display: flex;
     }
-
-    .hide {
-        display: none;
-    }
 }
 #canvas::before {
     content: "";

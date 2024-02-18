@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="video.css" type="text/css" />
+    <style>
+      .slide {
+        /*
+        display: flex;
+        position: relative;
+        */
+        justify-content: center;
+
+        div.content {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          z-index: 22;
+        }
+        #agile_text {
+          position: relative;
+          top: 200px;
+          left: -200px;
+        }
+
+        #tdd_text {
+          position: relative;
+          top: 400px;
+          left: 100px;
+        }
+
+        #oop_text {
+          position: relative;
+          top: 250px;
+          left: 350px;
+        }
+
+        #dry_text {
+          position: relative;
+          top: 450px;
+          left: -350px;
+        }
+        .dashed{
+          stroke-dasharray: 8,15;
+        }
+        div.text {
+          font-size: 28pt;
+          transform: translateY(70px);
+        }
+        .valign-middle {
+          margin-top: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas">
+      <div class="reveal">
+
+        <div class="slides">
+
+          <section class="slide" data-slide="1" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <h3 class="xr-fit-text" style="margin-top: 300px;">Single Responsibility Principle</h3>
+          </section>
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div id="agile_text" class="animate__fadeIn">Agile</div>
+            <div id="tdd_text" class="animate__fadeIn">TDD</div>
+            <div id="oop_text" class="animate__fadeIn">OOP</div>
+            <div id="dry_text" class="animate__fadeIn">DRY</div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Single Responsibility Principle</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">referenced often</li>
+                <li class="animate__fadeInDown">never fully explained</li>
+                <li class="animate__fadeInDown">always explained the same way</li>
+                <li class="animate__fadeInDown">vague and ambiguous language</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">what to expect</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">not a refactoring video</li>
+                <li class="animate__fadeInDown">how to identify responsibilities</li>
+                <li class="animate__fadeInDown">what to separate</li>
+                <li class="animate__fadeInDown">not how to separate</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Single Responsibility Principle</h4>
+              <h5 style="margin: 100px auto 0; font-weight: lighter;">a class should have one, and only one, reason to change</h5>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Single Responsibility Principle</h4>
+              <h5 style="margin: 100px auto 0; font-weight: lighter;"><s>a class should have one, and only one, reason to change</s></h5>
+              <center style="font-size: 150pt;">&#129326;</center>
+            </div>
+          </section>
+
+
+
+
+
+          <section data-autoappear="true" class="slide" data-slide="3" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div class="content valign-middle">
+              <div class="text animate__fadeInLeft" style="position: relative; top: 70px;">Responsibilities</div>
+              <div id="image" class="animate__fadeIn" data-delay="2000">
+                <svg
+                   width="400"
+                   height="200"
+                   viewBox="0 0 1024 200"
+                   version="1.1"
+                   id="svg1"
+                   xmlns="http://www.w3.org/2000/svg"
+                   xmlns:svg="http://www.w3.org/2000/svg">
+                  <g id="layer1">
+                    <path d="M 44,95 C 356.98042,279.51726 430.67142,73.77422 624,37 803.0894,2.9343 854,107 987,96" fill="none" stroke="white" stroke-width="5" class="dashed" />
+                    <path d="M 481,35 541,135" id="left_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
+                    <path d="M 541,35 481,135" id="right_x" stroke="rgba(255, 0, 0, 0.8)" stroke-width="15" />
+                  </g>
+                </svg>
+              </div>
+              <div class="text animate__fadeInRight" data-delay="-1000" data-fragment-index="1" style="position: relative; top: 70px;">Reasons to Change</div>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">sometimes...i read books</h4>
+              <h5 style="margin: 100px auto 0; font-weight: lighter;">Agile Software Development: Principles, Patterns, and Practices</h5>
+              <div class="fragment" style="margin: 20px auto; text-align: center;">
+                <h5 style="margin: 0 auto 0; font-weight: lighter; font-style: italic;">Robert Martin</h5>
+                <h5 style="margin: 0 auto 0; font-weight: lighter; font-style: italic;">(aka "Uncle Bob")</h5>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 200px auto 0;">example time</h4>
+          </section>
+
+
+
+
+
+          <section data-auto-animate class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
+              <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                <div data-id="game_box" class="animate__fadeIn" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
+                <div class="animate__fadeIn" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Frame</div>
+                <div class="animate__fadeIn" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Throw</div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+          <section data-auto-animate class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
+              <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
+                <div data-id="game_box" class="" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
+              </div>
+              <ol style="font-size: 20pt;">
+                <li class="fragment">Tracking the Frames <span class="fragment">(Tracking Game Progress/State)</span></li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-auto-animate data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
+              <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
+                <div class="" data-id="game_box" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
+              </div>
+              <ol style="font-size: 20pt;">
+                <li class="">Tracking the Frames (Tracking Game Progress/State)</li>
+                <li class="">Calculating the Score</li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section class="slide" data-auto-animate data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
+              <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
+                <div class="" data-id="game_box" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
+              </div>
+              <ol style="font-size: 20pt;">
+                <li class="">Tracking the Frames (Tracking Game Progress/State)</li>
+                <li class="">Calculating the Score</li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/appearance/appearance.js"></script>
+    <script>
+      Reveal.initialize({
+        autoAnimateEasing: 'ease-in',
+        autoAnimateDuration: 0.8,
+        controls: false,
+        progress: false,
+        disableLayout: true,
+        fragments: true,
+        fragmentInURL: true,
+        autoAnimate: true,
+        display: 'flex',
+        transition: 'none',
+        appearance: {
+          hideagain: false,
+          appearevent: 'slidechanged',
+        },
+        plugins: [ RevealMarkdown, Appearance ],
+      });
+
+      document.body.classList.remove('reveal-viewport');
+    </script>
+  </body>
+</html>
