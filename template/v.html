@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="video.css" type="text/css" />
     <style>
@@ -88,11 +89,9 @@
 
           <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
             <div style="display: grid; text-align: left; width: 80%;">
-              <h4 style="margin: 100px auto 0;">goals</h4>
+              <h4 style="margin: 100px auto 0;">the main problem</h4>
               <ul style="font-size: 26pt; list-style-type: none;">
                 <li class="animate__fadeInDown">what is a responsibility</li>
-                <li class="animate__fadeInDown">...</li>
-                <li class="animate__fadeInDown">profit</li>
               </ul>
             </div>
           </section>
@@ -132,8 +131,21 @@
               <ul style="font-size: 26pt; list-style-type: none;">
                 <li class="animate__fadeInDown">ambiguous terms</li>
                 <li class="animate__fadeInDown">lack context</li>
-                <li class="animate__fadeInDown">what is a reason to change?</li>
-                <li class="animate__fadeInDown">how is it related to responsibilities?</li>
+                <li class="animate__fadeInDown">what is a &quot;reason to change&quot;?</li>
+                <li class="animate__fadeInDown">how is it related to &quot;responsibility&quot;?</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-slide="2" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">instead...</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">think of it as categorizing behavior</li>
               </ul>
             </div>
           </section>
@@ -144,6 +156,7 @@
 
           <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
             <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">examples from:</h4>
               <h5 style="margin: 100px auto 0; font-weight: lighter;">Agile Software Development: Principles, Patterns, and Practices</h5>
               <div style="margin: 20px auto; text-align: center;">
                 <h5 style="margin: 0 auto 0; font-weight: lighter; font-style: italic;">Robert Martin</h5>
@@ -157,7 +170,7 @@
 
 
 
-          <section data-auto-animate class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+          <section class="slide" data-auto-animate data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
             <div style="display: grid; text-align: left; width: 80%;">
               <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
               <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr 1fr 1fr;">
@@ -172,14 +185,14 @@
 
 
 
-          <section data-auto-animate class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+          <section class="slide" data-auto-animate data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
             <div style="display: grid; text-align: left; width: 80%;">
               <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
               <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
                 <div data-id="game_box" class="" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
               </div>
               <ol style="font-size: 20pt;">
-                <li class="fragment">Tracking the Frames <span class="fragment">(Tracking Game Progress/State)</span></li>
+                <li class="fragment">Tracking the Frames <ul class="fragment"><li>but i prefer Tracking the Game's Progress</li></ul></li>
               </ol>
             </div>
           </section>
@@ -188,14 +201,14 @@
 
 
 
-          <section class="slide" data-auto-animate data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
             <div style="display: grid; text-align: left; width: 80%;">
               <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
               <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
                 <div class="" data-id="game_box" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
               </div>
               <ol style="font-size: 20pt;">
-                <li class="">Tracking the Frames (Tracking Game Progress/State)</li>
+                <li>Tracking the Frames <ul><li>but i prefer Tracking the Game's Progress</li></ul></li>
                 <li class="">Calculating the Score</li>
               </ol>
             </div>
@@ -207,16 +220,382 @@
 
 
 
-          <section class="slide" data-auto-animate data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
             <div style="display: grid; text-align: left; width: 80%;">
               <h4 style="margin: 100px auto 0;">Bowling Scorecard System</h4>
-              <div style="margin: 20px auto; text-align: center; gap: 50px; display: grid; grid-template-columns: 1fr;">
-                <div class="" data-id="game_box" style="border-radius: 5px; border: solid 1px white; font-size: 14pt; padding: 20px 40px;">Game</div>
-              </div>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers>
+                class Game
+                  int score()
+                  void add(int pins)
+                  void adjustCurrentFrame(int pins)
+                  int scoreForFrame(int theFrame)
+                  int handleSecondThrow()
+                  boolean strike(int pins)
+                  boolean spare()
+                  int twoBallsInFrame()
+                  int nextTwoBallsForStrike()
+                  int nextBallForSpare()
+                  int getCurrentFrame()
+
+                  int itsScore
+                  int[] itsThrows
+                  int itsCurrentThrow
+                  int itsCurrentFrame
+                  boolean firstThrow
+              </code></pre>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Tracking the Frames</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="3,4,7,12,17-18">
+                class Game
+                  int score()
+                  void add(int pins)
+                  void adjustCurrentFrame(int pins)
+                  int scoreForFrame(int theFrame)
+                  int handleSecondThrow()
+                  boolean strike(int pins)
+                  boolean spare()
+                  int twoBallsInFrame()
+                  int nextTwoBallsForStrike()
+                  int nextBallForSpare()
+                  int getCurrentFrame()
+
+                  int itsScore
+                  int[] itsThrows
+                  int itsCurrentThrow
+                  int itsCurrentFrame
+                  boolean firstThrow
+              </code></pre>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Calculating the Score</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="2,3,5,7,8-11,14-16">
+                class Game
+                  int score()
+                  void add(int pins)
+                  void adjustCurrentFrame(int pins)
+                  int scoreForFrame(int theFrame)
+                  int handleSecondThrow()
+                  boolean strike()
+                  boolean spare()
+                  int twoBallsInFrame()
+                  int nextTwoBallsForStrike()
+                  int nextBallForSpare()
+                  int getCurrentFrame()
+
+                  int itsScore
+                  int[] itsThrows
+                  int itsCurrentThrow
+                  int itsCurrentFrame
+                  boolean firstThrow
+              </code></pre>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Changes</h4>
               <ol style="font-size: 20pt;">
-                <li class="">Tracking the Frames (Tracking Game Progress/State)</li>
-                <li class="">Calculating the Score</li>
+                <li>Extracted methods from Game and moved into a Scorer class</li>
+                <li>Game then delegates to Scorer for anything score-related</li>
               </ol>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Modem Interface</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers>
+                class Modem
+                  void dial(String pno)
+                  void hangup()
+                  void send(char c)
+                  char recv()
+              </code></pre>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Modem Interface</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="2-3">
+                class Modem
+                  void dial(String pno)
+                  void hangup()
+                  void send(char c)
+                  char recv()
+              </code></pre>
+              <ol style="font-size: 20pt;">
+                <li>Connection Handling</li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Modem Interface</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="4-5">
+                class Modem
+                  void dial(String pno)
+                  void hangup()
+                  void send(char c)
+                  char recv()
+              </code></pre>
+              <ol style="font-size: 20pt;">
+                <li>Connection Handling</li>
+                <li>Data Transmission
+                  <ul class="fragment" style="font-size: 18pt">
+                    <li>notice that sending and receiving data are not separate responsibilities</li>
+                    <li>sending and receiving <em>are</em> different behaviors</li>
+                    <li>but they fall under the <u>category</u> of data transmission.  be careful not to separate too much</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Payroll System</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers>
+                class Employee
+                  double calculatePay()
+                  boolean storeCheck()
+              </code></pre>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Payroll System</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="2">
+                class Employee
+                  double calculatePay()
+                  boolean storeCheck()
+              </code></pre>
+              <ol style="font-size: 20pt;">
+                <li>Calculating Employee Wages for the Pay Period</li>
+              </ol>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Payroll System</h4>
+              <pre data-id="code"><code style="font-size: 10pt;" data-trim data-noescape data-line-numbers="3">
+                class Employee
+                  double calculatePay()
+                  boolean storeCheck()
+              </code></pre>
+              <ol style="font-size: 20pt;">
+                <li>Calculating Employee Wages for the Pay Period</li>
+                <li>Issuing the Check
+                  <ul class="fragment" style="font-size: 18pt;">
+                    <li>These are separate operations</li>
+                    <li>Issuing a check doesn't need to be coupled directly to wage calculation</li>
+                    <li>Regardless of how it's calculated, to issue a check it
+                      only needs to know the check amount</li>
+                    <li>What if you need to issue a check for any reason other
+                      than wage, like reimbursing an expense?</li>
+                    <li>In that case, the code to issue a check wouldn't be
+                      reusable without changes that could affect the integrity
+                      of the current system</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </section>
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Review</h4>
+              <p style="font-size: 22pt;">From 3 simple classes, we were able to identify 6 responsibilities:</p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 50px;">
+                <div class="fragment">
+                  &#127923; Game
+                  <ol style="font-size: 20pt;">
+                    <li>Tracking the Game's Progress</li>
+                    <li>Calculating the Score</li>
+                  </ol>
+                </div>
+                <div class="fragment">
+                  &#9742; Modem
+                  <ol style="font-size: 20pt;">
+                    <li>Handling the Connection</li>
+                    <li>Transmitting Data</li>
+                  </ol>
+                </div>
+                <div class="fragment">
+                  &#128181; Payroll
+                  <ol style="font-size: 20pt;">
+                    <li>Calculating Wages</li>
+                    <li>Issuing the Check</li>
+                  </ol>
+                </div>
+              </div>
+              <p style="font-size: 16pt;" class="fragment">These behaviors are all very different.  Even if they are associated with the same data type.</p>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">IRL</h4>
+              <p style="font-size: 22pt;">There are many shining examples of the SRP...</p>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">UNIX/Linux</h4>
+              <ul style="font-size: 20pt;">
+                <li>in a future video, i will cover the unix philosophy in depth, but one variation states:
+                  <blockquote>Write programs that do one thing and do it well</blockquote>
+                </li>
+                <li>no single command handling all fs operations:
+                  <ul style="font-size: 14pt;">
+                    <li>ls - list files in a directory</li>
+                    <li>cp - copy files</li>
+                    <li>mv - move files</li>
+                    <li>they are simple operations, and yet they were separated...</li>
+                  </ul>
+                </li>
+                <li>grep - search/filter text</li>
+                <li>cron - a daemon for scheduling tasks</li>
+                <li>crontab - a separate command for configuring the daemon</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">git</h4>
+              <ul style="font-size: 20pt;">
+                <li>git is made up of 135 subcommands that work together under-the-hood</li>
+                <li>from the git book:
+                  <blockquote style="font-size: 14pt;">
+                    [git] has a number of subcommands that do low-level work and
+                    were designed to be chained together UNIX-style or called
+                    from scripts. These commands are generally referred to as
+                    Git’s “plumbing” commands, while the more user-friendly
+                    commands are called “porcelain” commands.
+                  </blockquote>
+                </li>
+                <li>even if you're only familiar with the porcelain commands,
+                  those commands are just leveraging other commands that have
+                  isolated responsibilities</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">AWS</h4>
+              <p>Tons of small tools that can work in concert to build apps f all shapes and sizes</p>
+              <ul style="font-size: 20pt;">
+                <li>like 12 database solutions</li>
+                <li>SQS - fifo queue</li>
+                <li>SNS - pub/sub system</li>
+                <li>ElastiCache - caching</li>
+              </ul>
+              <p style="font-size: 20pt;">AWS is not a single application that's trying to do everything</p>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">IRL</h4>
+              <p style="font-size: 22pt;">Regardless of your personal opinion,
+              all of these systems are focused, robust, and composable. and they're
+              all key tools that power modern development</p>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 100px auto 0;">Homework</h4>
+              <p style="font-size: 22pt;">the next time you're looking at some
+              code, take a minute to list out the responsibilities of the
+              module, class, or function you're working with.</p>
+              <p style="font-size: 22pt;">if you find more than one, think
+              about how you can separate them</p>
             </div>
           </section>
 
@@ -232,6 +611,7 @@
     <script src="dist/reveal.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/appearance/appearance.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
     <script>
       Reveal.initialize({
         autoAnimateEasing: 'ease-in',
@@ -243,12 +623,12 @@
         fragmentInURL: true,
         autoAnimate: true,
         display: 'flex',
-        transition: 'none',
+        transition: 'fade',
         appearance: {
           hideagain: false,
           appearevent: 'slidechanged',
         },
-        plugins: [ RevealMarkdown, Appearance ],
+        plugins: [ RevealMarkdown, Appearance, RevealHighlight ],
       });
 
       document.body.classList.remove('reveal-viewport');
