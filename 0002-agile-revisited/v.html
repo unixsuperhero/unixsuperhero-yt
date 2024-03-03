@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="video.css" type="text/css" />
+    <style>
+      .slide {
+        /*
+        display: flex;
+        position: relative;
+        */
+        justify-content: center;
+
+        div.content {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          z-index: 22;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas">
+      <div class="reveal">
+
+        <div class="slides">
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <h3 class="xr-fit-text" style="margin-top: 300px;">Agile: A Retrospective</h3>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <p style="margin: 90px auto 0; font-size: 240pt;">&#9889;</p>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <p style="margin: 90px auto 0; font-size: 240pt;">&#129760;</p>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <img src="book-cover.jpg" alt="" style="margin: 80px auto 0; width: 300px;" />
+              <p style="font-size: 26pt; margin-bottom: 0;">
+                Agile Software Development: Principles, Patterns, and Practices
+              </p>
+              <p style="font-size: 18pt; margin-top: 0;">
+                Robert C. Martin
+              </p>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Recurring Themes</h4>
+              <ul style="font-size: 22pt; list-style-type: none;">
+                <li><em>Continuous attention to technical excellence and good design enhances agility.</em></li>
+                <li class="fragment">
+                  <blockquote>&quot;High quality is the key to high speed.&quot;</blockquote>
+                </li>
+                <li class="fragment"><em>[The team] should be able to maintain a constant pace indefinitely.</em></li>
+                <li class="fragment">
+                  <blockquote>&quot;They work at a rate that allows them to maintain the <u>highest quality standards</u> for the duration of the project.&quot;</blockquote>
+                </li>
+                <li class="fragment">
+                  <blockquote>&quot;[Developers] choose the tasks on which they feel comfortable working and keep the <u>quality of their workmanship high</u>.&quot;</blockquote>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Recurring Themes</h4>
+              <ul style="font-size: 22pt; list-style-type: none;">
+                <li><em>high quality</em></li>
+                <li><em>workmanship</em></li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">It doesn't say...</h4>
+              <ul style="font-size: 22pt; list-style-type: none;">
+                <li class="animate__fadeInDown" style="margin-top: 30px;">Sacrifice quality in the pursuit of speed.</li>
+                <li class="animate__fadeInDown" style="margin-top: 30px;">Just ship.</li>
+                <li class="animate__fadeInDown" style="margin-top: 30px;">Don't plan.</li>
+                <li class="animate__fadeInDown" style="margin-top: 30px;">Quality is a magic byproduct of Agile.</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 240px auto 0;">Overview</h4>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 100px;">Time Segments</h4>
+              <div class="timeline" style="font-size: 16pt; margin-top: 10px;">
+                <div style="margin-top: 8px; margin-bottom: 4px;">Project</div>
+                <div style="display: grid; grid-column: 1 / span 4; border: solid 1px rgb(255 255 255 / 80%); padding: 5px; gap: 15px;">
+                  <div style="grid-column: 1 / span 4;margin-top: 8px; margin-bottom: 4px; color: transparent;">Releases</div>
+                  <div style="display: grid; grid-column: 1 / span 2; border: solid 1px transparent; padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px; color: transparent;">Iterations</div>
+                    <div style="grid-column: 1; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-column: 3 / span 2; border: solid 1px transparent; padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px;">&nbsp;</div>
+                    <div style="grid-column: 1; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 100px;">Time Segments</h4>
+              <div class="timeline" style="font-size: 16pt; margin-top: 10px;">
+                <div style="margin-top: 8px; margin-bottom: 4px; color: rgba(255, 255, 255, 0.3);">Project</div>
+                <div style="display: grid; grid-column: 1 / span 4; border: solid 1px rgba(255, 255, 255, 0.3); padding: 5px; gap: 15px;">
+                  <div style="grid-column: 1 / span 4;margin-top: 8px; margin-bottom: 4px; color: rgb(255 255 255 / 80%);">Releases</div>
+                  <div style="display: grid; grid-column: 1 / span 2; border: solid 1px rgb(255 255 255 / 80%); padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px; color: transparent;">Iterations</div>
+                    <div style="grid-column: 1; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-column: 3 / span 2; border: solid 1px rgb(255 255 255 / 80%); padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px;">&nbsp;</div>
+                    <div style="grid-column: 1; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px transparent; height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 100px;">Time Segments</h4>
+              <div class="timeline" style="font-size: 16pt; margin-top: 10px;">
+                <div style="margin-top: 8px; margin-bottom: 4px; color: rgba(255, 255, 255, 0.3);">Project</div>
+                <div style="display: grid; grid-column: 1 / span 4; border: solid 1px rgba(255, 255, 255, 0.3); padding: 5px; gap: 15px;">
+                  <div style="grid-column: 1 / span 4;margin-top: 8px; margin-bottom: 4px; color: rgba(255, 255, 255, 0.3);">Releases</div>
+                  <div style="display: grid; grid-column: 1 / span 2; border: solid 1px rgba(255, 255, 255, 0.3); padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px; color: rgb(255 255 255 / 80%);">Iterations</div>
+                    <div style="grid-column: 1; border: solid 1px rgb(255 255 255 / 80%); height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px rgb(255 255 255 / 80%); height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-column: 3 / span 2; border: solid 1px rgba(255, 255, 255, 0.3); padding: 5px; gap: 15px;">
+                    <div style="grid-column: 1 / span 2;margin-top: 8px; margin-bottom: 4px;">&nbsp;</div>
+                    <div style="grid-column: 1; border: solid 1px rgb(255 255 255 / 80%); height: 2em;">
+                      &nbsp;
+                    </div>
+                    <div style="grid-column: 2; border: solid 1px rgb(255 255 255 / 80%); height: 2em;">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 30px;">Stories</h4>
+              <div class="timeline" style="font-size: 16pt; margin-top: 10px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                  <div>
+                    <div style="display: grid; border: solid 1px rgb(255 255 255 / 60%); grid-template-columns: 1fr 1fr 1fr; height: 400px; aspect-ratio: 1;">
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="display: grid; border: solid 1px rgb(255 255 255 / 60%); grid-template-columns: 1fr 1fr 1fr; height: 400px; aspect-ratio: 1;">
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 30px;">Tasks</h4>
+              <div class="timeline" style="font-size: 16pt; margin-top: 10px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                  <div>
+                    <div style="display: grid; border: solid 1px transparent; gap: 15px; grid-template-columns: 1fr 1fr 1fr; height: 400px; aspect-ratio: 1;">
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                        <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(0, 40%, 60%);">&nbsp;</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="display: grid; border: solid 1px transparent; gap: 15px; grid-template-columns: 1fr 1fr 1fr; height: 400px; aspect-ratio: 1;">
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                      <div style="aspect-ratio: 1; border: solid 1px transparent; background-color: hsl(190, 40%, 50%);">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Breaking Down Stories</h4>
+              <ul style="font-size: 22pt; list-style-type: none;">
+                <li class="animate__fadeInDown" style="margin-top: 10px;">You <em>can</em> break stories down into smaller stories...</li>
+                <li class="animate__fadeInDown" style="margin-top: 10px;">But Stories and Tasks are different.
+                  <ul>
+                    <li>Stories are for customers and describe high-level functionality</li>
+                    <li>Tasks are for developers</li>
+                  </ul>
+                </li>
+                <li class="animate__fadeInDown" style="margin-top: 10px;">
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Breaking Down Stories</h4>
+              <blockquote style="border-left: solid 1px rgb(255 255 255 / 0.6); padding-left: 15px; padding-top: 25px; font-size: 22pt;">
+                &quot;Users can securely transfer money into, out of, and between their accounts.&quot;
+                <br/>
+                <ul>
+                  <li>Users can login</li>
+                  <li>Users can logout</li>
+                  <li>Users can deposit money into their account</li>
+                  <li>Users can withdraw money from their account</li>
+                  <li>Users can transfer money from their account to another account</li>
+                </ul>
+              </blockquote>
+              <ul style="font-size: 22pt; list-style-type: none;">
+                <li style="margin-top: 10px;">Notice the language</li>
+                <li style="margin-top: 10px;">Every sentence starts with &quot;Users can...&quot;</li>
+                <li style="margin-top: 10px;">No mention of DBs, UIs, etc.</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Planning</h4>
+              <div class="timeline" style="font-size: 106pt; margin-top: 50px;">
+                <div style="display: grid; grid-template-columns: 1fr;">
+                  <div>
+                    <div style="display: grid; grid-template-columns: repeat(14, 1fr); grid-auto-rows: 75px; gap: 25px;">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div style="background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">00</sup>/<sub style="font-size: 40pt;">12</sub>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">00</sup>/<sub style="font-size: 40pt;">15</sub>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Planning</h4>
+              <div class="timeline" style="font-size: 106pt; margin-top: 50px;">
+                <div style="display: grid; grid-template-columns: 1fr;">
+                  <div>
+                    <div style="display: grid; grid-template-columns: repeat(14, 1fr); grid-auto-rows: 75px; gap: 25px;">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div style="background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div>
+                    &#x1F64B; <sup style="font-size: 50pt;">00</sup>/<sub style="font-size: 40pt;">12</sub>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">00</sup>/<sub style="font-size: 40pt;">15</sub>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Planning</h4>
+              <div class="timeline" style="font-size: 106pt; margin-top: 50px;">
+                <div style="display: grid; grid-template-columns: 1fr;">
+                  <div>
+                    <div style="display: grid; grid-template-columns: repeat(14, 1fr); grid-auto-rows: 75px; gap: 25px;">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div style="background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div>
+                    &#x1F64B; <sup style="font-size: 50pt;">04</sup>/<sub style="font-size: 40pt;">12</sub>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">00</sup>/<sub style="font-size: 40pt;">15</sub>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Planning</h4>
+              <div class="timeline" style="font-size: 106pt; margin-top: 50px;">
+                <div style="display: grid; grid-template-columns: 1fr;">
+                  <div>
+                    <div style="display: grid; grid-template-columns: repeat(14, 1fr); grid-auto-rows: 75px; gap: 25px;">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div style="border: dashed 1px hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div style="border: dashed 1px hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">11</sup>/<sub style="font-size: 40pt;">12</sub>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                  </div>
+                  <div>
+                    &#x1F468; <sup style="font-size: 50pt;">13</sup>/<sub style="font-size: 40pt;">15</sub>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(0, 40%, 60%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                    <div style="display: inline-block; vertical-align: middle; background-color: hsl(190, 40%, 50%); width: 75px; height: 75px; aspect-ratio: 1;">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">Halfway Point</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">Verify that 1/2 of the Story Points are complete (not tasks!)</li>
+                <li class="animate__fadeInDown">Otherwise, make adjustments</li>
+                <li class="animate__fadeInDown">&nbsp;</li>
+                <li class="animate__fadeInDown">
+                  Beware of the <u>Nightmare Scenario</u>
+                  <blockquote>The iteration ends and 90% of Tasks are finished, but 0 Stories were completed.</blockquote>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">After Iteration</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">Calculate velocity from completed <u>Stories</u></li>
+                <li class="animate__fadeInDown">Developers calculate their budget from completed <u>Tasks</u></li>
+                <li class="animate__fadeInDown">Present a demo to the customer</li>
+                <li class="animate__fadeInDown">Receive feedback in the form of more User Stories</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">The Difference</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li>No Tasks, Task Points, Dev Budgets
+                  <ul>
+                    <li>Stories are used as Tasks</li>
+                    <li>Stories are broken into Tasks but called Stories <em>and</em> they're split across iterations</li>
+                  </ul>
+                </li>
+                <li>Too many stories are put on the iteration, stories aren't kept whole
+                  <ul>
+                    <li>Stories are broken into Tasks but called Stories <em>and</em> they're split across iterations</li>
+                    <li>App is always in an unfinished state</li>
+                  </ul>
+                </li>
+                <li>Devs don't sign-up for anything before the iteration starts
+                  <ul>
+                    <li>The iteration is a free-for-all</li>
+                  </ul>
+                </li>
+                <li>Devs pick-up whole stories during the iteration
+                  <ul>
+                    <li>Every dev is in their own corner, there is no teamwork</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">The Implications</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">Fewer stories, same work done</li>
+                <li class="animate__fadeInDown">App is always whole and stable</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; text-align: left; width: 80%;">
+              <h4 style="margin: 60px auto 0;">The Difference Over Time</h4>
+              <ul style="font-size: 26pt; list-style-type: none;">
+                <li class="animate__fadeInDown">...</li>
+              </ul>
+            </div>
+          </section>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/appearance/appearance.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        autoAnimateEasing: 'ease-in',
+        autoAnimateDuration: 0.8,
+        controls: false,
+        progress: false,
+        disableLayout: true,
+        fragments: true,
+        fragmentInURL: true,
+        autoAnimate: true,
+        display: 'flex',
+        transition: 'fade',
+        appearance: {
+          hideagain: false,
+          appearevent: 'slidechanged',
+        },
+        plugins: [ RevealMarkdown, Appearance, RevealHighlight ],
+      });
+
+      document.body.classList.remove('reveal-viewport');
+    </script>
+  </body>
+</html>
