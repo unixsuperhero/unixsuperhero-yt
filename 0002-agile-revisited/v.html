@@ -25,6 +25,153 @@
           z-index: 22;
         }
       }
+      .grid { display: grid; }
+
+      #tasks {
+        grid-template-areas: "s1 s2 s3 s4 s5";
+        padding: 1px;
+        gap: 10px;
+        width: 400px;
+        font-size: 14pt;
+        font-family: system-ui;
+
+        .taskgroup {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          border: solid 2px var(--color);
+          padding: 2px;
+          gap: 2px;
+
+          span {
+            width: 30px;
+            aspect-ratio: 1;
+            text-align: center;
+            transform: translateY(4px);
+          }
+        }
+      }
+
+      #iterations {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        margin-top: 50px;
+        gap: 70px;
+
+        .is1, .is2 {
+          gap: 1px;
+        }
+      }
+      .is1 {
+        width: 300px;
+        grid-template-areas:
+          ". . title title title ."
+          "i1 i1 s1 s2 s3 s4"
+          "i2 i2 s1 s2 s3 s4"
+          "i3 i3 s1 s5 s3 s4"
+          "i4 i4 s1 s5 . .";
+
+        .s1 {
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+        }
+
+        .s2 {
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+        }
+
+        .s3 {
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+        }
+
+        .s4 {
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+        }
+
+        .s5 {
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+        }
+      }
+
+      .is2 {
+        width: 300px;
+        grid-template-areas:
+          ". . title title title ."
+          "i1 i1 s1 s1 s1 s1"
+          "i2 i2 s2 s2 s5 s5"
+          "i3 i3 s3 s3 s3 ."
+          "i4 i4 s4 s4 s4 .";
+
+        .s1 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .s2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .s3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .s4 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .s5 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .i1 { grid-area: i1; }
+      .i2 { grid-area: i2; }
+      .i3 { grid-area: i3; }
+      .i4 { grid-area: i4; }
+
+      .s1 { grid-area: s1; --color: hsl(0, 60%, 65%); }
+      .s2 { grid-area: s2; --color: hsl(40, 60%, 65%); }
+      .s3 { grid-area: s3; --color: hsl(81, 60%, 65%); }
+      .s4 { grid-area: s4; --color: hsl(200, 60%, 65%); }
+      .s5 { grid-area: s5; --color: hsl(260, 60%, 65%); }
+
+      .s1.used, .s1 .used { background-color: black; border: dashed 2px var(--color); }
+      .s2.used, .s2 .used { background-color: black; border: dashed 2px var(--color); }
+      .s3.used, .s3 .used { background-color: black; border: dashed 2px var(--color); }
+      .s4.used, .s4 .used { background-color: black; border: dashed 2px var(--color); }
+      .s5.used, .s5 .used { background-color: black; border: dashed 2px var(--color); }
+
+      .i1, .i2, .i3, .i4 {
+        font-size: 16pt;
+        font-family: system-ui;
+        font-weight: lighter;
+      }
+      .s1, .s2, .s3, .s4, .s5 {
+        div {
+          width: 30px;
+          aspect-ratio: 1;
+          background-color: var(--color);
+          border: solid 2px var(--color);
+        }
+      }
+      .is1, .is2 {
+        .s1, .s2, .s3, .s4, .s5 {
+          div {
+            margin: 2px 2px 20px;
+          }
+        }
+      }
+
+      .border {
+        border: solid 1px var(--color);
+      }
     </style>
   </head>
   <body>
@@ -558,6 +705,996 @@
                 <li>No Tasks, Task Points, Dev Budgets</li>
                 <li>Devs don't sign-up for anything before the iteration starts </li>
               </ul>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 000 -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 001 - i1-left -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div class="used"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div class="used"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 002 - i1 right -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 003 - i2-left -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 004 - i2 right -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 005 - i3-left -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div class="used"></div>
+        <div></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s4">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s5">
+          <div class="used"></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 006 - i3 right -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 007 - i4-left -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s4">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s5">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 008 - i4 right -->
+          <section class="slide" data-appearevent="slidechanged" data-autoappear="true" data-background-image="./images/anime-bg.png" data-background-opacity="0.02" data-background-size="900px" style="display: block;">
+            <div style="display: grid; justify-content: end; width: 80%;">
+
+    <div id="tasks" class="grid" style="margin-top: 150px;">
+      <div class="taskgroup s1">
+        <span>1</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s2">
+        <span>2</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s3">
+        <span>3</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s4">
+        <span>4</span>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+      <div class="taskgroup s5">
+        <span>5</span>
+        <div class="used"></div>
+        <div class="used"></div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="iterations">
+      <div class="grid is1">
+        <div style="grid-area: title;">IRL</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s2">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s4">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="s5">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid is2">
+        <div style="grid-area: title;">Book</div>
+        <div class="i1">Iteration <sub>1</sub></div>
+        <div class="i2">Iteration <sub>2</sub></div>
+        <div class="i3">Iteration <sub>3</sub></div>
+        <div class="i4">Iteration <sub>4</sub></div>
+        <div class="s1">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s2">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s3">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s4">
+          <div class="used"></div>
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+        <div class="s5">
+          <div class="used"></div>
+          <div class="used"></div>
+        </div>
+      </div>
+    </div>
             </div>
           </section>
 
