@@ -36,6 +36,10 @@
   &.grayed .story {
     border: solid 1px hsl(0, 0%, 10%);
   }
+  &.grayed .task.selected {
+    --story-color: rgba(255, 255, 255, 0.7);
+    border-style: solid;
+  }
 
   &.graytasks .task {
     border: dashed 1px hsl(0, 0%, 10%);
@@ -52,6 +56,22 @@
   &.graytasks2 .story.selected .task {
     border: solid 1px hsl(0, 0%, 10%);
   }
+
+  &.graytasks3 .story {
+    border: solid 1px hsl(0, 0%, 10%);
+  }
+
+  &.graytasks3 .task {
+    border: dashed 1px hsl(0, 0%, 10%);
+  }
+
+  &.graytasks3 .story.selected .task {
+    border: solid 1px var(--story-color);
+  }
+
+  &.graytasks3 .story .task.selected  {
+    border: solid 1px var(--story-color);
+  }
 }
 
 .task {
@@ -66,7 +86,6 @@
 
   &.filled { --fill-color: var(--story-color); }
   &.selected {
-    --story-color: rgba(255, 255, 255, 0.7);
     border-style: solid;
   }
 }
@@ -430,9 +449,9 @@
                   <div class="itask s00"></div>
                 </div>
               </div>
-              <div class="demo_container">
+              <div class="demo_container" data-id="btmstory">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks">
                   <div class="story s01">
                     <div class="task"></div>
                     <div class="task"></div>
@@ -576,9 +595,9 @@
                   <div class="itask s00"></div>
                 </div>
               </div>
-              <div class="demo_container">
+              <div class="demo_container" data-id="btmstory">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks">
                   <div class="story s01">
                     <div class="task"></div>
                     <div class="task"></div>
@@ -720,9 +739,9 @@
                   <div class="itask s00"></div>
                 </div>
               </div>
-              <div class="demo_container">
+              <div class="demo_container" data-id="btmstory">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks">
                   <div class="story s01">
                     <div class="task"></div>
                     <div class="task"></div>
@@ -1285,14 +1304,14 @@
                 <br/>
                 <div class="header">Iteration:</div>
                 <div class="iteration">
-                  <div class="itask s01"></div>
-                  <div class="itask s01"></div>
-                  <div class="itask s02"></div>
-                  <div class="itask s02"></div>
-                  <div class="itask s02"></div>
-                  <div class="itask s06"></div>
-                  <div class="itask s06"></div>
-                  <div class="itask s06"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
                 </div>
               </div>
             </div>
@@ -1303,7 +1322,7 @@
               <h3 style="text-align: left;">Iteration 1: Planning (3/3)</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories grayed">
+                <div class="stories graytasks3">
                   <div class="story s01">
                     <div class="task selected"></div>
                     <div class="task"></div>
@@ -1382,7 +1401,7 @@
               </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories graytasks">
+                <div class="stories graytasks3">
                   <div class="story s01 selected">
                     <div class="task"></div>
                     <div class="task"></div>
