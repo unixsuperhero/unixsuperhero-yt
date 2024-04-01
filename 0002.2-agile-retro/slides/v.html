@@ -32,6 +32,26 @@
   display: flex;
   justify-content: center;
   font-size: 14pt;
+
+  &.grayed .story {
+    border: solid 1px hsl(0, 0%, 10%);
+  }
+
+  &.graytasks .task {
+    border: dashed 1px hsl(0, 0%, 10%);
+  }
+
+  &.graytasks .story.selected .task {
+    border: solid 1px var(--story-color);
+  }
+
+  &.graytasks2 .task {
+    border: dashed 1px hsl(0, 0%, 10%);
+  }
+
+  &.graytasks2 .story.selected .task {
+    border: solid 1px hsl(0, 0%, 10%);
+  }
 }
 
 .task {
@@ -45,7 +65,10 @@
   background-color: var(--fill-color);
 
   &.filled { --fill-color: var(--story-color); }
-  &.selected { --story-color: rgba(255, 255, 255, 0.7); border-style: solid; }
+  &.selected {
+    --story-color: rgba(255, 255, 255, 0.7);
+    border-style: solid;
+  }
 }
 
 .iteration {
@@ -81,6 +104,42 @@
   margin-right: 15px;
   border: solid 1px var(--story-color);
   background-color: var(--fill-color);
+
+  &.selected {
+    border: solid 1px white;
+  }
+
+  &.filled {
+    background-color: hsl(0, 0%, 30%);
+    border: solid 1px hsl(0, 0%, 15%);
+
+    background-color: var(--story-color);
+    border-color: transparent;
+    opacity: 0.19;
+
+    .task {
+      background-color: transparent;
+      border: solid 1px transparent;
+    }
+  }
+}
+
+.story2 {
+  --story-color: white;
+  --fill-color: black;
+
+  height: 140px;
+  width: 90%;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 15px;
+  border: solid 1px var(--story-color);
+  background-color: var(--fill-color);
+
+  .task {
+    display: inline-block;
+    margin-right: 10px;
+  }
 
   &.filled {
     background-color: hsl(0, 0%, 30%);
@@ -285,9 +344,92 @@
 
         <div class="slides">
 
-          <section class="slide" data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+
+
+
+
+          <section class="slide" data-auto-animate data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
             <div class="container">
               <h3 style="text-align: left;">Diff / Time</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories">
+                  <div class="story s01">
+                    <div data-id="task01" class="task s01"></div>
+                    <div data-id="task02" class="task s01"></div>
+                  </div>
+                  <div class="story s02">
+                    <div data-id="task03" class="task s02"></div>
+                    <div data-id="task04" class="task s02"></div>
+                    <div data-id="task05" class="task s02"></div>
+                  </div>
+                  <div class="story s03">
+                    <div data-id="task06" class="task s03"></div>
+                  </div>
+                  <div class="story s04">
+                    <div data-id="task07" class="task s04"></div>
+                    <div data-id="task08" class="task s04"></div>
+                  </div>
+                  <div class="story s05">
+                    <div data-id="task09" class="task s05"></div>
+                    <div data-id="task10" class="task s05"></div>
+                    <div data-id="task11" class="task s05"></div>
+                    <div data-id="task12" class="task s05"></div>
+                  </div>
+                  <div class="story s06">
+                    <div data-id="task13" class="task s06"></div>
+                    <div data-id="task14" class="task s06"></div>
+                    <div data-id="task15" class="task s06"></div>
+                  </div>
+                  <div class="story s07">
+                    <div data-id="task16" class="task s07"></div>
+                  </div>
+                  <div class="story s08">
+                    <div data-id="task17" class="task s08"></div>
+                    <div data-id="task18" class="task s08"></div>
+                  </div>
+                  <div class="story s09">
+                    <div data-id="task19" class="task s09"></div>
+                    <div data-id="task20" class="task s09"></div>
+                    <div data-id="task21" class="task s09"></div>
+                    <div data-id="task22" class="task s09"></div>
+                  </div>
+                  <div class="story s10">
+                    <div data-id="task23" class="task s10"></div>
+                  </div>
+                  <div class="story s11">
+                    <div data-id="task24" class="task s11"></div>
+                    <div data-id="task25" class="task s11"></div>
+                    <div data-id="task26" class="task s11"></div>
+                  </div>
+                  <div class="story s12">
+                    <div data-id="task27" class="task s12"></div>
+                    <div data-id="task28" class="task s12"></div>
+                    <div data-id="task29" class="task s12"></div>
+                  </div>
+                  <div class="story s13">
+                    <div data-id="task30" class="task s13"></div>
+                    <div data-id="task31" class="task s13"></div>
+                  </div>
+                  <div class="story s14">
+                    <div data-id="task32" class="task s14"></div>
+                    <div data-id="task33" class="task s14"></div>
+                    <div data-id="task34" class="task s14"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
                 <div class="stories">
@@ -352,6 +494,385 @@
                     <div class="task"></div>
                     <div class="task"></div>
                     <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section class="slide" data-auto-animate data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <div class="container">
+              <h3 style="text-align: left;">Diff / Time</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories">
+                  <div class="story2 s00">
+                    <div data-id="task01" class="task s01"></div>
+                    <div data-id="task02" class="task s01"></div>
+                    <div data-id="task03" class="task s02"></div>
+                    <div data-id="task04" class="task s02"></div>
+                    <div data-id="task05" class="task s02"></div>
+                    <div data-id="task06" class="task s03"></div>
+                    <div data-id="task07" class="task s04"></div>
+                    <div data-id="task08" class="task s04"></div>
+                    <div data-id="task09" class="task s05"></div>
+                    <div data-id="task10" class="task s05"></div>
+                    <div data-id="task11" class="task s05"></div>
+                    <div data-id="task12" class="task s05"></div>
+                    <div data-id="task13" class="task s06"></div>
+                    <div data-id="task14" class="task s06"></div>
+                    <div data-id="task15" class="task s06"></div>
+                    <br/>
+                    <div data-id="task16" class="task s07"></div>
+                    <div data-id="task17" class="task s08"></div>
+                    <div data-id="task18" class="task s08"></div>
+                    <div data-id="task19" class="task s09"></div>
+                    <div data-id="task20" class="task s09"></div>
+                    <div data-id="task21" class="task s09"></div>
+                    <div data-id="task22" class="task s09"></div>
+                    <div data-id="task23" class="task s10"></div>
+                    <div data-id="task24" class="task s11"></div>
+                    <div data-id="task25" class="task s11"></div>
+                    <div data-id="task26" class="task s11"></div>
+                    <div data-id="task27" class="task s12"></div>
+                    <div data-id="task28" class="task s12"></div>
+                    <div data-id="task29" class="task s12"></div>
+                    <div data-id="task30" class="task s13"></div>
+                    <br/>
+                    <div data-id="task31" class="task s13"></div>
+                    <div data-id="task32" class="task s14"></div>
+                    <div data-id="task33" class="task s14"></div>
+                    <div data-id="task34" class="task s14"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories">
+                  <div class="story s01">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s06">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-auto-animate data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <div class="container">
+              <h3 style="text-align: left;">Diff / Time</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories">
+                  <div class="story2 s00">
+                    <div data-id="task04" class="task s02"></div>
+                    <div data-id="task09" class="task s05"></div>
+                    <div data-id="task10" class="task s05"></div>
+                    <div data-id="task01" class="task s01"></div>
+                    <div data-id="task13" class="task s06"></div>
+                    <div data-id="task05" class="task s02"></div>
+                    <div data-id="task12" class="task s05"></div>
+                    <div data-id="task06" class="task s03"></div>
+                    <div data-id="task02" class="task s01"></div>
+                    <div data-id="task03" class="task s02"></div>
+                    <div data-id="task18" class="task s08"></div>
+                    <div data-id="task20" class="task s09"></div>
+                    <div data-id="task08" class="task s04"></div>
+                    <div data-id="task11" class="task s05"></div>
+                    <div data-id="task16" class="task s07"></div>
+                    <br/>
+                    <div data-id="task17" class="task s08"></div>
+                    <div data-id="task14" class="task s06"></div>
+                    <div data-id="task33" class="task s14"></div>
+                    <div data-id="task22" class="task s09"></div>
+                    <div data-id="task34" class="task s14"></div>
+                    <div data-id="task23" class="task s10"></div>
+                    <div data-id="task07" class="task s04"></div>
+                    <div data-id="task21" class="task s09"></div>
+                    <div data-id="task24" class="task s11"></div>
+                    <div data-id="task28" class="task s12"></div>
+                    <div data-id="task31" class="task s13"></div>
+                    <div data-id="task32" class="task s14"></div>
+                    <div data-id="task30" class="task s13"></div>
+                    <div data-id="task29" class="task s12"></div>
+                    <div data-id="task26" class="task s11"></div>
+                    <br/>
+                    <div data-id="task27" class="task s12"></div>
+                    <div data-id="task19" class="task s09"></div>
+                    <div data-id="task15" class="task s06"></div>
+                    <div data-id="task25" class="task s11"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories">
+                  <div class="story s01">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s06">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+          <section class="slide" data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <div class="container">
+              <h3 style="text-align: left;">Diff / Time</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories grayed">
+                  <div class="story s01">
+                    <div class="task s01"></div>
+                    <div class="task s01"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task s02"></div>
+                    <div class="task s02"></div>
+                    <div class="task s02"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task s03"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task s04"></div>
+                    <div class="task s04"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task s05"></div>
+                    <div class="task s05"></div>
+                    <div class="task s05"></div>
+                    <div class="task s05"></div>
+                  </div>
+                  <div class="story s06">
+                    <div class="task s06"></div>
+                    <div class="task s06"></div>
+                    <div class="task s06"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task s07"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task s08"></div>
+                    <div class="task s08"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task s09"></div>
+                    <div class="task s09"></div>
+                    <div class="task s09"></div>
+                    <div class="task s09"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task s10"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task s11"></div>
+                    <div class="task s11"></div>
+                    <div class="task s11"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task s12"></div>
+                    <div class="task s12"></div>
+                    <div class="task s12"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task s13"></div>
+                    <div class="task s13"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task s14"></div>
+                    <div class="task s14"></div>
+                    <div class="task s14"></div>
                   </div>
                 </div>
                 <br/>
@@ -451,10 +972,174 @@
 
           <section class="slide" data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
             <div class="container">
-              <h3 style="text-align: left;">Iteration 1: Planning</h3>
+              <h3 style="text-align: left;">Iteration 1: Planning (1/3)</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
+                  <div class="story s01">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s06">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories graytasks">
+                  <div class="story s01">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s06">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                  <div class="itask s00"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <div class="container">
+              <h3 style="text-align: left;">Iteration 1: Planning (2/3)</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories grayed">
                   <div class="story s01">
                     <div class="task selected"></div>
                     <div class="task"></div>
@@ -533,15 +1218,15 @@
               </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
-                  <div class="story s01">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                <div class="stories graytasks2">
+                  <div class="story s01 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
-                  <div class="story s02">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s02 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s03">
                     <div class="task"></div>
@@ -556,10 +1241,174 @@
                     <div class="task"></div>
                     <div class="task"></div>
                   </div>
+                  <div class="story s06 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s09">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s01"></div>
+                  <div class="itask s01"></div>
+                  <div class="itask s02"></div>
+                  <div class="itask s02"></div>
+                  <div class="itask s02"></div>
+                  <div class="itask s06"></div>
+                  <div class="itask s06"></div>
+                  <div class="itask s06"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-transition="none" data-background-image="./images/anime-bg.png" data-background-opacity="0.15" data-background-size="900px">
+            <div class="container">
+              <h3 style="text-align: left;">Iteration 1: Planning (3/3)</h3>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories grayed">
+                  <div class="story s01">
+                    <div class="task selected"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task selected"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task selected"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
                   <div class="story s06">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s07">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s08">
                     <div class="task selected"></div>
                     <div class="task selected"></div>
+                  </div>
+                  <div class="story s09">
                     <div class="task selected"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s10">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s11">
+                    <div class="task selected"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s12">
+                    <div class="task selected"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s13">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s14">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                </div>
+                <br/>
+                <div class="header">Iteration:</div>
+                <div class="iteration">
+                  <div class="itask s01"></div>
+                  <div class="itask s03"></div>
+                  <div class="itask s05"></div>
+                  <div class="itask s08"></div>
+                  <div class="itask s08"></div>
+                  <div class="itask s09"></div>
+                  <div class="itask s11"></div>
+                  <div class="itask s12"></div>
+                </div>
+              </div>
+              <div class="demo_container">
+                <div class="header">Stories:</div>
+                <div class="stories graytasks">
+                  <div class="story s01 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s02 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s03">
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s04">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s05">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                  </div>
+                  <div class="story s06 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s07">
                     <div class="task"></div>
@@ -618,7 +1467,7 @@
               <h3 style="text-align: left;">Iteration 1: Finished</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01">
                     <div class="task filled"></div>
                     <div class="task"></div>
@@ -782,7 +1631,7 @@
               <h3 style="text-align: left;">Iteration 2: Board</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01">
                     <div class="task filled"></div>
                     <div class="task"></div>
@@ -861,7 +1710,7 @@
               </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks2">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -946,7 +1795,7 @@
               <h3 style="text-align: left;">Iteration 2: Planning</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01">
                     <div class="task filled"></div>
                     <div class="task selected"></div>
@@ -1025,7 +1874,7 @@
               </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1038,15 +1887,15 @@
                   <div class="story s03">
                     <div class="task"></div>
                   </div>
-                  <div class="story s04">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s04 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
-                  <div class="story s05">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s05 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s06 filled">
                     <div class="task filled"></div>
@@ -1056,9 +1905,9 @@
                   <div class="story s07">
                     <div class="task"></div>
                   </div>
-                  <div class="story s08">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s08 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s09">
                     <div class="task"></div>
@@ -1110,7 +1959,7 @@
               <h3 style="text-align: left;">Iteration 2: Finished</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1274,7 +2123,7 @@
               <h3 style="text-align: left;">Iteration 3: Board</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1438,7 +2287,7 @@
               <h3 style="text-align: left;">Iteration 3: Planning</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1517,7 +2366,7 @@
               </div>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories graytasks">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1527,8 +2376,8 @@
                     <div class="task filled"></div>
                     <div class="task filled"></div>
                   </div>
-                  <div class="story s03">
-                    <div class="task selected"></div>
+                  <div class="story s03 selected">
+                    <div class="task"></div>
                   </div>
                   <div class="story s04 filled">
                     <div class="task filled"></div>
@@ -1545,8 +2394,8 @@
                     <div class="task filled"></div>
                     <div class="task filled"></div>
                   </div>
-                  <div class="story s07">
-                    <div class="task selected"></div>
+                  <div class="story s07 selected">
+                    <div class="task"></div>
                   </div>
                   <div class="story s08 filled">
                     <div class="task filled"></div>
@@ -1558,22 +2407,22 @@
                     <div class="task"></div>
                     <div class="task"></div>
                   </div>
-                  <div class="story s10">
-                    <div class="task selected"></div>
+                  <div class="story s10 selected">
+                    <div class="task"></div>
                   </div>
-                  <div class="story s11">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s11 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s12">
                     <div class="task"></div>
                     <div class="task"></div>
                     <div class="task"></div>
                   </div>
-                  <div class="story s13">
-                    <div class="task selected"></div>
-                    <div class="task selected"></div>
+                  <div class="story s13 selected">
+                    <div class="task"></div>
+                    <div class="task"></div>
                   </div>
                   <div class="story s14">
                     <div class="task"></div>
@@ -1602,7 +2451,7 @@
               <h3 style="text-align: left;">Iteration 3: Finished</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1766,7 +2615,7 @@
               <h3 style="text-align: left;">Iteration 4: Board</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -1930,7 +2779,7 @@
               <h3 style="text-align: left;">Iteration 4: Planning</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -2094,7 +2943,7 @@
               <h3 style="text-align: left;">Iteration 4: Finished</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -2258,7 +3107,7 @@
               <h3 style="text-align: left;">Iteration 5: Board</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -2422,7 +3271,7 @@
               <h3 style="text-align: left;">Iteration 5: Planning</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -2586,7 +3435,7 @@
               <h3 style="text-align: left;">Iteration 5: Finished</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
@@ -2750,7 +3599,7 @@
               <h3 style="text-align: left;">Board Complete</h3>
               <div class="demo_container">
                 <div class="header">Stories:</div>
-                <div class="stories">
+                <div class="stories grayed">
                   <div class="story s01 filled">
                     <div class="task filled"></div>
                     <div class="task filled"></div>
