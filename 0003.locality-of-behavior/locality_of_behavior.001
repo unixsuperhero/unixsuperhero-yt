@@ -1,0 +1,4 @@
+I want to record a bunch of videos about software principles and practices.  Separation is going to be a prominent, recurring topic.  However, I already know that some prime fanboy is going to comment, "i prefer locality of behavior instead of separation".  For all the parrots out there, this video is for you.
+Carson Gross, who created HTMX, wrote an essay on Locality of Behavior.
+Everytime the subject of separation comes up, the primeagen will say that he prefers locality of behavior over separation.  however, these 2 ideas are not mutually exclusive.  i hope to explain that by the end of this video.
+Here is his official definition, "The behaviour of a unit of code should be as obvious as possible by looking only at that unit of code".
