@@ -9,24 +9,28 @@ Here is Carson's official definition, "The behaviour of a unit of code should be
 Notice that it doesn't actually say anything about where code is located.
 and it definitely doesn't say anything about where code is located in relation to other code.
 Ultimately, it's about clarity.
-
-
-
 If you look at a unit of code in isolation, what it's doing should be obvious.
-In other words, there shouldn't be any surprises or hidden side-effects, which he calls "spooky actions".
+In other words, there shouldn't be any surprises or hidden side-effects.
+This is what he means by "spooky actions".
 
-Locality of behavior sounds a lot like some other fundamental principles like encapsulation and blackbox programming.  But more on this later.
 
+
+
+If you look at a unit of code in isolation, what it's doing should be obvious. ...buffer
+In other words, there shouldn't be any surprises or hidden side-effects, which he calls "spooky actions". buffer
+
+Locality of behavior sounds a lot like some other fundamental principles like encapsulation and blackbox programming.
+But more on this later.
 Let's take a closer look at some of the sections in his essay.
 
-#1 Surfacing behavior versus inlining implementation
+number one, Surfacing behavior versus inlining implementation
 
 In this section, he makes a distinction between defining a function and invoking a function.
 
-Apparently some people think that Locality of Behavior suggests that behavior should be inlined, instead of extracted into a separate function.  But that's not the case.
-
+Apparently some people think that Locality of Behavior suggests that behavior should be inlined, instead of extracted into a separate function.
+But that's not the case.
 In my opinion, the most important sentence is in this section:
-"A good function abstracts away its implementation details, but is also invoked in an obvious manner, without any spooky action at a distance."
+"A good function abstracts away its implementation details, but is also invoked in an obvious manner, without any spooky action at a distance." ...buffer
 
 It says a lot about his mentality and how he thinks.
 
@@ -35,29 +39,29 @@ It says a lot about his mentality and how he thinks.
 - Clear naming and interfaces are important.
 - He doesn't like weird coupling or implicit and unexpected side-effects.
 
-#2 Conflicting with Dry
+number two, Conflicting with Dry
 
 He says that dry doesn't align with locality of behavior.  This isn't necessarily true.
 
-A few decades ago, when ajax was gaining popularity, I wrote a framework that is almost identical to HTMX.
+A few decades ago, when ajax was gaining popularity, I wrote a framework that is almost identical to HTMX. ....buffer
 
-Instead of writing the same boilerplate over and over for making an asynchronous request and swapping some element's content with the response, I wrote a function that only took an element and used its properties, like a link's H ref to configure the endpoint, and other properties to define which element to update.
+Instead of writing the same boilerplate over and over for making an asynchronous request and swapping some element's content with the response, I wrote a function that would take element and used its properties to determine the endpoint, and which element to update.
 
 It then used jquery to listen for click events on all elements with a specific class and pass the element into the function.
 
-When practicing dry and focusing on modular, composable code, this should be everyone's natural conclusion.
+When practicing dry and focusing on modular, composable code this, _should be_, the natural conclusion.
 
-Dry only conflicts with locality of behavior unrelated actions are coupled together.
+Dry only conflicts with locality of behavior when unrelated actions are coupled together.
 
-#3 Conflicting with Separation of Concerns
+number three, Conflicting with Separation of Concerns
 
 There isn't much to say here.  I'm not sure separation of concerns conflicts either.  If you have good naming and good encapsulation, then when a unit of code calls a function, the behavior should still be obvious.
 
 It's only a problem when developers have a procedural mindset.
 
-I will say this...it's a stretch to say that tailwind's popularity indicates that separation of concerns is losing support amongst developers.
+I will say this, ...it's a stretch to say that tailwind's popularity indicates that separation of concerns is losing support amongst developers.
 
 Separation doesn't conflict with locality of behavior.
-When done right, separation improves clarity and compliments locality of behavior.
+Instead, when done right, separation improves clarity and compliments it.
 
-More on that later.
+More on that in the future.
