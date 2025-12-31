@@ -1,0 +1,57 @@
+I want to record a bunch of videos about software principles and practices.
+Separation is going to be a prominent recurring topic.
+However, I already know that some primogen fanboy is going to comment.
+Um, actually, I prefer locality of behavior.
+For all the parrots out there, this video is for you.
+Carson Gross, who created HTMX, wrote an essay on locality of behavior.
+Here is Carson's official definition.
+The behavior of a unit of code should be as obvious as possible by looking only at that unit of code.
+Notice that it doesn't actually say anything about where code is located.
+And it definitely doesn't say anything about where code is located in relation to other code.
+Ultimately, it's about clarity.
+If you look at a unit of code in isolation, what it's doing should be obvious.
+The key term here is isolation.
+Before moving on, there's one more sentence that I'd like to highlight.
+A good function abstracts away its implementation details, but is also invoked in an obvious
+manner without any spooky action at a distance.
+For me, this is the most important sentence in the whole article.
+It says a lot about how he thinks and what he considers important.
+He's not opposed to abstractions or hiding minor implementation details, but he is
+opposed to weird coupling and hidden surprises.
+He uses the term spooky action a few times.
+From what I can tell, the whole point of locality of behavior is to avoid them.
+A spooky action is an implicit side effect.
+There's a big difference between minor implementation details and the actions he's referring to.
+There are two topics that I plan to cover, which would really help explain what he means.
+They are separating levels of abstraction and avoiding procedural thinking.
+A lot of developers have a procedural mindset, where every function or class is just defining
+the sequence of steps that have to happen in order to accomplish some goal.
+Programs written this way typically don't make any distinction between levels of abstraction,
+and the execution path is very linear and too dimensional.
+But I'll go into greater detail in a future video.
+Besides spooky actions, he says that locality of behavior conflicts with some other development
+principles, dry and separation of concerns.
+Now, I'm not so sure that dry and locality of behavior are conflicting ideas.
+A few decades ago, when Ajax was gaining popularity, I wrote a framework that is almost
+identical to HTMLX instead of writing a bunch of event handlers with the same boilerplate over and over.
+I wrote one event handler and used the target elements properties to determine which endpoint to hit
+and which element's content to replace.
+Then it used jQuery to attach that handler to any element with a specific class.
+When practicing dry and focusing on modular composable code, this should be the natural conclusion.
+The boring implementation details were hidden, and the important details were attached to
+the element triggering the request.
+So by itself, I don't think dry clashes with locality of behavior.
+It's the weird things people do when trying to be dry.
+It only clashes when unrelated things are coupled together, or a function is doing something
+that is in obvious based on its interface.
+Part of the reason I think separation is such an important topic is because there are
+countless ways code can be split up, so I think separation of concerns isn't much different than dry.
+It's about making reasonable choices with how and why you separate.
+Like most principles, they don't always make sense.
+It's up to the developer to decide when it makes sense to apply it.
+Although I will say it's a stretch.
+To take tailwinds popularity as an indication that devs are moving away from separation of concerns.
+So locality of behavior is less about avoiding separation as a whole.
+It's about clarity and not sneaking behavior into places where it doesn't belong.
+If anything, there should be more separation.
+So spooky actions can be exposed and referenced at higher levels of abstraction.
